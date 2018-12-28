@@ -197,5 +197,17 @@
         <artifactId>selenium-java</artifactId>
         <version>3.141.59</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.taskadapter/trello-java-wrapper -->
+    <dependency>
+        <groupId>com.taskadapter</groupId>
+        <artifactId>trello-java-wrapper</artifactId>
+        <version>0.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.2</version>
+    </dependency>
 </dependencies>
 </project>
