@@ -21,7 +21,7 @@ public class WebsiteSocialMediaMain {
     public static void main(String[] args) {
         int lastIndex = -1;
         WebsiteJsoup websiteJsoup = new WebsiteJsoup();
-        int i = 22711;
+        int i = 23270;
         while (true) {
             int x = websiteJsoup.fetchLastInsertedWebsiteCityIdIndex();
             List<WebsiteSocialMedia> websiteSocialMediaList = new ArrayList<>();
