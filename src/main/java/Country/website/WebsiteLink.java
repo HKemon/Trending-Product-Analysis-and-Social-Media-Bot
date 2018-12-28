@@ -29,12 +29,12 @@ import static util.SeleniumUtil.waitForElementToBeVisible;
 public class WebsiteLink {
 //    private static ArrayList<String> errorPageIteration = new ArrayList<>();
     private static List<WebsiteCategory> websiteCategoryList = new ArrayList<>();
-    public static ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+    private static ExecutorService executorService = Executors.newFixedThreadPool(2);
 
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver", "C:/Users/emon/Downloads/geckodriver-v0.23.0-win64/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
-        getCountryCity_IdAndCity(driver, 228, "United Kingdom");
+        getCountryCity_IdAndCity(driver, 78, "Germany");
 //        findShop(WebsiteLink.executorService,driver,288,2,"men fashion",);
     }
 

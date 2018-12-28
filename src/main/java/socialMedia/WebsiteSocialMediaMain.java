@@ -21,7 +21,7 @@ public class WebsiteSocialMediaMain {
     public static void main(String[] args) {
         int lastIndex = -1;
         WebsiteJsoup websiteJsoup = new WebsiteJsoup();
-        int i = 10800;
+        int i = 22711;
         while (true) {
             int x = websiteJsoup.fetchLastInsertedWebsiteCityIdIndex();
             List<WebsiteSocialMedia> websiteSocialMediaList = new ArrayList<>();
@@ -35,12 +35,16 @@ public class WebsiteSocialMediaMain {
             i += 50;
             System.out.println(websites);
             for (Website website : websites) {
-                Elements elements = extractElementsOfWebsite(website.getWebsite());
-                if (elements != null) {
-                    WebsiteSocialMedia websiteSocialMedia = socialMediaOfWebsite(website.getId(), elements);
-                    if (websiteSocialMedia != null) {
-                        websiteSocialMediaList.add(websiteSocialMedia);
+                try {
+                    Elements elements = extractElementsOfWebsite(website.getWebsite());
+                    if (elements != null) {
+                        WebsiteSocialMedia websiteSocialMedia = socialMediaOfWebsite(website.getId(), elements);
+                        if (websiteSocialMedia != null) {
+                            websiteSocialMediaList.add(websiteSocialMedia);
+                        }
                     }
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
             }
             batchInsert(websiteSocialMediaList);
@@ -121,7 +125,7 @@ public class WebsiteSocialMediaMain {
                 tumblr = true;
                 count++;
                 websiteSocialMedia.setTumblr(link.attr("href"));
-            } else if (!vk && link.attr("href").contains("vk.com")) {
+            } else if (!vk && link.attr("href").contains("vkontakte.ru")) {
 //                System.out.println(link.attr("href"));
                 vk = true;
                 count++;

@@ -55,7 +55,7 @@ public class ProjectUtils {
                     .build();
             trigger = TriggerBuilder
                     .newTrigger()
-                    .withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInHours(5).repeatForever())
+                    .withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInHours(24).repeatForever())
                     .build();
             scheduler = schFactory.getScheduler();
             scheduler.start();

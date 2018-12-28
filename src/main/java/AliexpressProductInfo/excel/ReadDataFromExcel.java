@@ -15,7 +15,7 @@ public class ReadDataFromExcel {
 
     // Used to Read URL from AliexpressProductInfo.excel and pass it for further operation
     public void readDataForDatabase() {
-        try (InputStream inputStream = new FileInputStream(excelFolder + "Aliexpress.xlsx")) {
+        try (InputStream inputStream = new FileInputStream(excelFolder + "Aliexpress3.xlsx")) {
             Workbook workbook = WorkbookFactory.create(inputStream);
 
 //            long a = System.currentTimeMillis();
