@@ -78,20 +78,6 @@ public class ArrayToEntityObjects {
             }
             if (!arrayRankOrder.isEmpty())
                 insertObjectInDailyRanksOrders(arrayRankOrder, tagId, url, pageNum);
-
-//            Visiting https://www.aliexpress.com/category/200005171/snowboarding-jackets/1.html?isFavorite=y&SortType=total_tranpro_desc
-//            URL https://www.aliexpress.com/category/200005171/snowboarding-jackets/1.html?isFavorite=y&SortType=total_tranpro_desc
-//            Connection timed out: connect https://www.aliexpress.com/category/200005171/snowboarding-jackets/1.html?isFavorite=y&SortType=total_tranpro_desc
-//            In For next page iteration
-//            URL https://www.aliexpress.com/category/200005171/snowboarding-jackets/1.html?isFavorite=y&SortType=total_tranpro_desc
-//            No exception in Jsoup
-//            Set tag id
-//                    splitURLForPageNumber
-//            Stop Executing Next Page
-//            I 0
-//            Sports & Entertainment > Skiing & Snowboarding > Snowboarding Jackets 1 arrayListReturn true
-//            arrayRankOrder is empty
-
             else System.out.println("arrayRankOrder is empty");  // work on it
         }
     }

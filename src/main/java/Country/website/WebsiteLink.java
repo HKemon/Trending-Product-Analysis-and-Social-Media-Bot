@@ -34,7 +34,8 @@ public class WebsiteLink {
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver", "C:/Users/emon/Downloads/geckodriver-v0.23.0-win64/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
-        getCountryCity_IdAndCity(driver, 78, "Germany");
+        getCountryCity_IdAndCity(driver, 72, "Finland");
+        getCountryCity_IdAndCity(driver, 158, "Norway");
 //        findShop(WebsiteLink.executorService,driver,288,2,"men fashion",);
     }
 

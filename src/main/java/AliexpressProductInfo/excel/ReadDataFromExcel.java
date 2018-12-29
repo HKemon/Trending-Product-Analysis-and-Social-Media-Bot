@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import static AliexpressProductInfo.util.ProjectUtils.*;
 
 public class ReadDataFromExcel {
-    private ArrayList<String> arrayList = new ArrayList<>();
-
     // Used to Read URL from AliexpressProductInfo.excel and pass it for further operation
     public void readDataForDatabase() {
         try (InputStream inputStream = new FileInputStream(excelFolder + "Aliexpress3.xlsx")) {
@@ -38,14 +36,6 @@ public class ReadDataFromExcel {
                     }
                 }
             }
-
-//            for (String s: arrayList) {
-//                // Find the all possible category from the specific url
-//                System.out.println(s);
-//                iterateLists.rawHtml(s);
-//            }
-//            long b = System.currentTimeMillis();
-//            System.out.println(b - a);
         } catch (IOException ex) {
             System.out.println("The file could not be read : " + ex.getMessage());
         } catch (EncryptedDocumentException ex) {
@@ -54,17 +44,6 @@ public class ReadDataFromExcel {
             executorService.shutdown();
             System.out.println("End of excel file URL iterations");
         }
-
-//        Visiting https://www.aliexpress.com/category/200002617/moisturizing-gloves/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        URL https://www.aliexpress.com/category/200002617/moisturizing-gloves/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        Connection reset https://www.aliexpress.com/category/200002617/moisturizing-gloves/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        In For next page iteration
-//        URL https://www.aliexpress.com/category/200002617/moisturizing-gloves/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        No exception in Jsoup
-//        Stop Executing Next Page
-//        I 1
-//        Beauty & Health > Skin Care > Hands & Nails > Moisturizing Gloves 1 arrayListReturn true
-//        End of excel file URL iterations
     }
 
     // Used to populate the Ip Agent from Excel file to 2D Array

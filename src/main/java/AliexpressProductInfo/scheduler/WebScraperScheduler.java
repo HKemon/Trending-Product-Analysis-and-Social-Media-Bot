@@ -12,20 +12,6 @@ import org.quartz.JobExecutionException;
 
 import static AliexpressProductInfo.util.ProjectUtils.*;
 
-
-//Visiting https://www.aliexpress.com/category/13004/fishing-rope/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        URL https://www.aliexpress.com/category/13004/fishing-rope/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        Connection timed out: connect https://www.aliexpress.com/category/13004/fishing-rope/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        In For next page iteration
-//        URL https://www.aliexpress.com/category/13004/fishing-rope/1.html?isFavorite=y&SortType=total_tranpro_desc
-//        No exception in Jsoup
-//        Set tag id
-//        splitURLForPageNumber
-//        Stop Executing Next Page
-//        I 5
-//        Sports & Entertainment > Fishing > Fishing Rope 1 arrayListReturn true
-
-
 public class WebScraperScheduler implements Job {
     private ReadDataFromExcel readDataFromExcel = new ReadDataFromExcel();
 
@@ -133,14 +119,6 @@ public class WebScraperScheduler implements Job {
                 rank++;
             } else break;
         }
-
-//        System.out.println("I " + i);
-//        int x = Integer.parseInt(String.valueOf(data[--i][5]));
-//        System.out.println(x);
-//        if (x < ProjectUtils.minimumOrder) {
-//            ProjectUtils.accessNextPage = false;
-//            System.out.println("demo===============================>");
-//        }
     }
 
     private Object[][] arraySize(Elements orderNumbers) {
